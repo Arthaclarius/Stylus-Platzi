@@ -1,0 +1,429 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="stylus">Stylus</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#1-introducción-al-curso">1. Introducción al curso</a><ul>
+<li><a href="#11-uicopiladores">1.1. UI/Copiladores</a><ul>
+<li><a href="#111-codekithttpscodekitappcom---trial34">1.1.1. <a href="https://codekitapp.com/">Codekit</a> - Trial|$34</a><ul>
+<li><a href="#1111-características">1.1.1.1. Características</a></li>
+</ul>
+</li>
+<li><a href="#112-preposhttpspreprosio---trial29">1.1.2. <a href="https://prepros.io/">Prepos</a> - Trial|$29</a><ul>
+<li><a href="#1121-características">1.1.2.1. Características</a></li>
+</ul>
+</li>
+<li><a href="#113-webpackhttpsplatzicomclaseswebpack">1.1.3. <a href="https://platzi.com/clases/webpack/">Webpack</a></a></li>
+</ul>
+</li>
+<li><a href="#12-projecto-_platzimusic-stylus_">1.2. Projecto <em>[PlatziMusic]-Stylus</em></a></li>
+</ul>
+</li>
+<li><a href="#2-cómo-funciona-stylus">2. Cómo funciona Stylus</a><ul>
+<li><a href="#21-anidaciones">2.1. Anidaciones</a></li>
+</ul>
+</li>
+<li><a href="#3-instalacion-webpack">3. Instalacion Webpack</a></li>
+<li><a href="#4-herramientas-de-stylus">4. Herramientas de Stylus</a><ul>
+<li><a href="#41-variables">4.1. Variables</a></li>
+<li><a href="#42-estructura-de-css">4.2. Estructura de CSS</a></li>
+<li><a href="#43-mixins">4.3. Mixins</a></li>
+<li><a href="#44-funciones-internas">4.4. Funciones internas</a></li>
+<li><a href="#45-condicionales">4.5. Condicionales</a></li>
+<li><a href="#46-directiva-for">4.6. Directiva For</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h1 id="1-introducci-n-al-curso">1. Introducción al curso</h1>
+<p>Stylus es un pre-procesador de css. Lo que quire decir que este código se copila para luego guardarlo en un archivo CSS. Por lo tanto se traduce del lenguaje de Stylus al lenguaje de CSS.</p>
+<p>Stylus trabaja con NodeJS</p>
+<h2 id="1-1-ui-copiladores">1.1. UI/Copiladores</h2>
+<h3 id="1-1-1-codekit-https-codekitapp-com-trial-34">1.1.1. <a href="https://codekitapp.com/">Codekit</a> - Trial|$34</h3>
+<blockquote>
+<p>macOS</p>
+</blockquote>
+<p>Build websites faster and better</p>
+<p>Sass, Less, Stylus, CSS, CoffeeScript, Pug, Slim, Haml, TypeScript, JavaScript, ES6, Markdown, JSON, SVG, PNG, GIF and JPEG</p>
+<h4 id="1-1-1-1-caracter-sticas">1.1.1.1. Características</h4>
+<ul>
+<li>Refrescar automáticamente los navegadores</li>
+<li>Cualquier dispositivo</li>
+<li>No requiere mucha/ninguna configuración</li>
+<li>Optimizacion y Minificacion</li>
+<li>Instalación de Frameworks</li>
+<li>Debuger</li>
+</ul>
+<h3 id="1-1-2-prepos-https-prepros-io-trial-29">1.1.2. <a href="https://prepros.io/">Prepos</a> - Trial|$29</h3>
+<blockquote>
+<p>Mac, Windows &amp; Linux</p>
+</blockquote>
+<p>Compile Sass, Less, Stylus, Jade, CoffeeScript on Mac, Windows &amp; Linux with Live Browser Reload</p>
+<p>Sass, Less, Stylus, Cssnext, Jade/Pug, Markdown, Slim, Coffeescript etc.</p>
+<h4 id="1-1-2-1-caracter-sticas">1.1.2.1. Características</h4>
+<ul>
+<li>Debuger</li>
+<li>Refrescar automáticamente los navegadores</li>
+<li>Optimizacion y Minificacion</li>
+<li>Prevista desde la red para distintos dispositivos</li>
+<li>Inspector remoto</li>
+<li>Temas claros y oscuros</li>
+</ul>
+<h3 id="1-1-3-webpack-https-platzi-com-clases-webpack-">1.1.3. <a href="https://platzi.com/clases/webpack/">Webpack</a></h3>
+<blockquote>
+<p>Mac, Windows &amp; Linux</p>
+</blockquote>
+<p>Puedes copilarlo utilizando webpack. Lo único que requiere es que lo configures. En Platzi tiene un curso de webpack el cual enseñan a configurar webpack y también como utilizarlo con Stylus y demas pre/post-procesadores de estilos.</p>
+<h2 id="1-2-projecto-_-platzimusic-stylus_">1.2. Projecto <em>[PlatziMusic]-Stylus</em></h2>
+<p>Se recomienda <strong>no</strong> guardar los estilos en la raíz. En mi caso creare una carpeta <code>./src</code> para todos los archivos &quot;Fuentes&quot; que utilize mi proyecto y una carpeta interna <code>./src/styles</code> para guardar los estilos no procesados. Tambien voy a requerir una carpeta <code>dist/css</code> para los output(los archivos finales).</p>
+<p>Ahora crearemos el primer archivo en <code>./src/styles</code></p>
+<blockquote>
+<p>Deberías configurar el output de tu archivo. Eso dependera de tu UI. En mi caso sera <code>./dist/css</code></p>
+</blockquote>
+<p><em>styles.styl</em></p>
+<pre><code>body
+  color: red
+</code></pre><p><em>[output]/styles.css</em></p>
+<pre><code>body{color:#f00}
+</code></pre><h1 id="2-c-mo-funciona-stylus">2. Cómo funciona Stylus</h1>
+<p>En stylus no requeriremos el uso de</p>
+<p><strong>{ ... }</strong></p>
+<p><em>css</em></p>
+<pre><code>body {
+  background: #lightyellow;
+}
+</code></pre><p><em>stylus</em></p>
+<pre><code>body
+  background: lightyellow
+</code></pre><p><strong>punto y coma</strong>
+<em>css</em></p>
+<pre><code>body {
+  background: #ffffe0;
+  color: #2c2c2c;
+}
+</code></pre><p><em>stylus</em></p>
+<pre><code>body
+  background: lightyellow
+  color: #2c2c2c
+</code></pre><p><strong>la coma</strong>
+<em>css</em></p>
+<pre><code>body,
+.light-theme {
+  background: #ffffe0;
+  color: #2c2c2c;
+}
+body .header,
+.light-theme .header {
+  font-family: monospace;
+}
+</code></pre><p><em>stylus</em></p>
+<pre><code>body
+.light-theme
+  background: lightyellow
+  color: #2c2c2c
+  .header
+    font-family: monospace
+</code></pre><h2 id="2-1-anidaciones">2.1. Anidaciones</h2>
+<p>Con stylus tenemos acceso a hacer anidaciones interesantes.</p>
+<p><em>sub</em></p>
+<blockquote>
+<p>Hacemos referencia a todos los elementos que estén dentro de las etiquetas padres
+```
+body, .light-theme
+  background lightyellow
+  color #2c2c2c</p>
+</blockquote>
+<p>  .primer-hijo
+    margin-bottom 24px</p>
+<pre><code>
+_child_
+&gt; Con el uso de &quot;&gt;&quot; hacemos referencia a los hijos directos del elemento padre
+</code></pre><p>body, .light-theme
+  background lightyellow
+  color #2c2c2c</p>
+<blockquote>
+<p>.primer-hijo
+    margin-bottom 24px
+```</p>
+</blockquote>
+<p><em>reference</em></p>
+<blockquote>
+<p>Con el uso de &quot;&amp;&quot; hacemos referencia al nombre del elemento padre
+```
+.psudoe-element
+  width 300px</p>
+</blockquote>
+<p>  &amp;:before
+    content &#39;hola&#39;</p>
+<p>  .ie-8 &amp;
+    &amp;:before
+      content &#39;ciao&#39;</p>
+<pre><code>
+&gt; **NOTA:** No anidar mas de 3 veces
+
+_ejemplo de modulación_
+</code></pre><p>.btn
+  background white
+  color black
+  border-radius 3px</p>
+<p>  &amp;-alert
+    background red
+    color white</p>
+<p>  &amp;-warn
+    background orange
+    color white</p>
+<pre><code>
+# 3. Instalacion Webpack
+_package.json_
+</code></pre><p>&quot;scripts&quot;: {
+  &quot;build&quot;: &quot;webpack --mode development&quot;,
+  &quot;build:dev&quot;: &quot;webpack --watch --mode development&quot;,
+  &quot;build:prod&quot;: &quot;webpack --mode production&quot;
+},
+...
+&quot;devDependencies&quot;: {
+  &quot;css-loader&quot;: &quot;^0.28.10&quot;,
+  &quot;extract-text-webpack-plugin&quot;: &quot;^4.0.0-beta.0&quot;,
+  &quot;style-loader&quot;: &quot;^0.20.2&quot;,
+  &quot;stylus&quot;: &quot;^0.54.5&quot;,
+  &quot;stylus-loader&quot;: &quot;^3.0.2&quot;,
+  &quot;webpack&quot;: &quot;^4.1.1&quot;,
+  &quot;webpack-cli&quot;: &quot;^2.0.10&quot;
+}</p>
+<pre><code>
+_index.js_
+</code></pre><p>import &#39;../styles/styles.styl&#39;</p>
+<p>console.log(&quot;styles loaded&quot;)</p>
+<pre><code>
+_styles.styl_
+</code></pre><p>.btn
+  background white
+  color black
+  border-radius 3px</p>
+<p>  &amp;-alert
+    background red
+    color white</p>
+<p>  &amp;-warn
+    background orange
+    color white</p>
+<p>  &amp;-info
+    background lightblue
+    color white</p>
+<pre><code>
+_webpack.config.js_
+</code></pre><p>const path = require(&#39;path&#39;)
+const ExtractTextPlugin = require(&#39;extract-text-webpack-plugin&#39;)</p>
+<p>module.exports = {
+  entry: path.resolve(<strong>dirname, &#39;src/js/index.js&#39;),
+  output: {
+    path: path.resolve(</strong>dirname, &#39;dist/js&#39;),
+    filename: &quot;index.js&quot;
+  },
+  module: {
+    rules: [
+      {
+        test: /.styl$/,
+        use: ExtractTextPlugin.extract({
+          fallback: &quot;style-loader&quot;,
+          use: [
+            &#39;css-loader&#39;,
+            &#39;stylus-loader&#39;
+          ]
+        })
+      }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin(&quot;stylesWP/styles.css&quot;)
+  ]
+}</p>
+<pre><code>
+# 4. Herramientas de Stylus
+
+## 4.1. Variables
+
+Las variables nos permiten controlar el entorno de nuestros estilos. Desde la reutilizacion de valores hasta ajustes desde un pequeño cambio.
+
+_styles.styl_
+</code></pre><p>// Variables
+font-size-normal = 18px
+font-size-small = font-size-normal - 2px
+font-size-paragraph = font-size-normal</p>
+<p>// Texts
+p
+  font-size font-size-paragraph</p>
+<p>span
+  font-size font-size-normal</p>
+<p>  &amp;.small
+    font-size font-size-small</p>
+<pre><code>
+## 4.2. Estructura de CSS
+
+Siguiendo el ejemplo del profesor tendríamos una estructura similar a la siguiente
+
+* index.html
+* ./src
+  * ./styles
+    * styles.styl
+    * ./base
+    * ./components
+    * ./layout
+    * ./lib
+* ./dist
+  * ./css
+    * styles.css
+
+_index.html_
+</code></pre><p><link rel="stylesheet" href="./dist/css/styles.css"></p>
+<pre><code>
+_styles.styl_
+</code></pre><p>@import &quot;lib/_variables.styl&quot;
+@import &quot;lib/_mixins.styl&quot;
+@import &quot;lib/_functions.styl&quot;</p>
+<p>@import &quot;layout/_site.styl&quot;
+@import &quot;layout/_blocks.styl&quot;</p>
+<p>@import &quot;base/_links.styl&quot;
+@import &quot;base/_buttons.styl&quot;
+@import &quot;base/_typography.styl&quot;
+@import &quot;base/_tables.styl&quot;</p>
+<p>@import &quot;components/_grid.styl&quot;
+@import &quot;components/_utilities.styl&quot;</p>
+<pre><code>
+## 4.3. Mixins
+
+Los mixins nos permiten agregar &quot;funciones&quot; que nos devuelven contenido de clases en base a los parámetros
+
+&gt; NOTA: Al declarar un mixin **siempre** nombrarlos con el prefijo mixin `mixin-[name] ()`
+
+_mixins.styl_
+</code></pre><p>mixin-max-width()
+  max-width: 80%
+  margin-left: auto
+  margin-right: auto</p>
+<p>.container-mixin
+  margin-bott
+  mixin-max-width()</p>
+<pre><code>
+_styles.css_
+</code></pre><p>.container-mixin {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}</p>
+<pre><code>
+Ahora bien, si deseamos que nuestro mixin no siempre tengan el mismo valor `80%` en el caso anterior podemos usar los **Mixin Parametricos**
+
+_mixins.styl_
+</code></pre><p>page-max-width = 80%
+mixin-max-width(width = page-max-width)
+  max-width: width
+  margin-left: auto
+  margin-right: auto</p>
+<p>.container-mixin
+  mixin-max-width(80%)</p>
+<p>.container 
+  mixin-max-width(800px)</p>
+<pre><code>
+_styles.css_
+</code></pre><p>.container-mixin {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}</p>
+<pre><code>
+## 4.4. Funciones internas
+Podemos utilizar funciones, incluso mismas funciones que nos brinda stylus
+
+_styles.styl_
+</code></pre><p>func-grid-div(cols)
+  100% / 12 * cols</p>
+<p>.col
+  &amp;-1
+    width func-grid-div(1)
+  &amp;-6
+    width func-grid-div(6)</p>
+<pre><code>
+_styles.css_
+</code></pre><p>.col-1 {
+  width: 8.333333333333334%;
+}
+.col-6 {
+  width: 50%;
+}</p>
+<pre><code>
+## 4.5. Condicionales
+</code></pre><p>func-compare(a, b)
+  ifa &gt; b
+    higher
+  elseif a &lt; b
+    lower
+  else
+    equal</p>
+<pre><code>
+## 4.6. Directiva For
+Utilizando ciclos podemos realizar grandes cosas en css utilizando pocas lineas en Stylus
+
+_styles.styl_
+</code></pre><p>func-grid-div(cols)
+  (100% / 12 * cols)</p>
+<p>gridSize = (0..12)</p>
+<p>.col
+  display flex
+  flex-wrap wrap
+  position relative
+  justify-content flex-start
+  flex-direction row
+  for i in gridSize
+    &amp;, &amp;-{i}
+      width func-grid-div(i)</p>
+<pre><code>
+_styles.css_
+</code></pre><p>.col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.col,
+.col-0 {
+  width: 0%;
+}
+.col,
+.col-1 {
+  width: 8.333333333333334%;
+}
+...
+.col,
+.col-10 {
+  width: 83.33333333333334%;
+}
+.col,
+.col-11 {
+  width: 91.66666666666667%;
+}
+.col,
+.col-12 {
+  width: 100%;
+}</p>
+<p>```</p>
+
+      </body>
+    </html>

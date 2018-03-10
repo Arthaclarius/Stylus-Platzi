@@ -1,0 +1,14 @@
+func-grid-div(cols)
+  (100% / 12 * cols)
+
+gridSize = (0..12)
+
+.col
+  display flex
+  flex-wrap wrap
+  position relative
+  justify-content flex-start
+  flex-direction row
+  for i in gridSize
+    &, &-{i}
+      width func-grid-div(i)

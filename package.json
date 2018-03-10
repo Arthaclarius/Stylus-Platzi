@@ -1,0 +1,30 @@
+{
+  "name": "stylus-platzi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "build:dev": "webpack --watch --mode development",
+    "build:prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arthaclarius/Stylus-Platzi.git"
+  },
+  "author": "arthaclarius <sgcg5@hotmail.com> (https://twitter.com/Arthaclarius)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arthaclarius/Stylus-Platzi/issues"
+  },
+  "homepage": "https://github.com/Arthaclarius/Stylus-Platzi#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "style-loader": "^0.20.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10"
+  }
+}
